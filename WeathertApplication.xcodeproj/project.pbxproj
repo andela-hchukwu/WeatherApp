@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		474EA0142020C7220034B2C1 /* WeatherAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474EA0132020C7220034B2C1 /* WeatherAPIClient.swift */; };
+		474EA01620235D310034B2C1 /* WeatherCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474EA01520235D310034B2C1 /* WeatherCellViewModel.swift */; };
 		478DE4DD2019FFB7008DB6FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478DE4DC2019FFB7008DB6FB /* AppDelegate.swift */; };
 		478DE4E22019FFB7008DB6FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478DE4E02019FFB7008DB6FB /* Main.storyboard */; };
 		478DE4E42019FFB7008DB6FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 478DE4E32019FFB7008DB6FB /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		474EA0132020C7220034B2C1 /* WeatherAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPIClient.swift; sourceTree = "<group>"; };
+		474EA01520235D310034B2C1 /* WeatherCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCellViewModel.swift; sourceTree = "<group>"; };
 		478DE4D92019FFB7008DB6FB /* WeathertApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeathertApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		478DE4DC2019FFB7008DB6FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		478DE4E12019FFB7008DB6FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		478DE4EE201A00E2008DB6FB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				474EA01520235D310034B2C1 /* WeatherCellViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				478DE4F1201A0135008DB6FB /* WeatherTableViewController.swift in Sources */,
 				478DE4F4201A0601008DB6FB /* Weather.swift in Sources */,
 				478DE4F8201A32E7008DB6FB /* EndPoint.swift in Sources */,
+				474EA01620235D310034B2C1 /* WeatherCellViewModel.swift in Sources */,
 				478DE4DD2019FFB7008DB6FB /* AppDelegate.swift in Sources */,
 				478DE4F6201A2AF7008DB6FB /* APIClient.swift in Sources */,
 			);

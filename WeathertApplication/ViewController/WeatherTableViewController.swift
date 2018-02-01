@@ -10,6 +10,8 @@ import UIKit
 
 class WeatherTableViewController: UITableViewController {
 
+    var cellViewModels = [WeatherCellViewModel]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +21,12 @@ class WeatherTableViewController: UITableViewController {
             switch either {
             case .value(let forecastText):
                 print(forecastText)
+                self.cellViewModels = forecastText.forecastDays.map {
+                    WeatherCellViewModel(url: $0.iconUrl, day: $0.day, description: $0.description)
+                }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             case .error(let error):
                 print(error)
             }
@@ -31,7 +39,7 @@ class WeatherTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return cellViewModels.count
     }
 
 
@@ -39,6 +47,12 @@ class WeatherTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath)
 
         // Configure the cell...
+        let cellViewModel = cellViewModels[indexPath.row]
+        cell.textLabel?.text = cellViewModel.day
+        cell.detailTextLabel?.text = cellViewModels.description
+        cellViewModel.loadImage { (image) in
+            cell.imageView?.image = image
+        }
 
         return cell
     }
